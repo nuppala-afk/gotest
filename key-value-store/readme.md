@@ -5,7 +5,7 @@ Requirements:
 - 2A. Interpretation 1: I may have misinterpreted these requirements and I am still fuzzy on some of them.
     - BEGIN: beginning of a transaction, commnd stored in command cache
     - GET, SET, UNSET: commands executed and commands are stored in a command cache
-    - ROLLBACK: Any commands till the occurance of the most recent BEGIN need to be undone, which means any commands between the second most recent begin to the most recent begin are re-executed (I'm still fuzzy on the nested transaction behavior)
+    - ROLLBACK: Any commands till the occurance of the most recent BEGIN need to be undone, which means any commands between the second most recent BEGIN to the most recent BEGIN are re-executed (I'm still fuzzy on how far back we need to go in case of nested transactions). 
     - COMMIT: ?? Using the tmpCache implementation is a good idea
     - END: Delete all cached commands
 
